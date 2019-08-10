@@ -5,13 +5,14 @@
   "license": "MIT",
   "scripts": {
     "grab": "node index.js",
-    "build-service": ""
+    "build-service": "node service.js"
   },
   "dependencies": {
     "apixu": "apixu/apixu-nodejs#master",
     "axios": "^0.19.0",
     "moment": "^2.24.0",
     "mongodb": "^3.3.0-beta2",
+    "node-windows": "^0.1.14",
     "ramda": "^0.26.1"
   }
 }

@@ -65,23 +65,32 @@ const run = async () => {
           );
           // console.log(missionDates);
 
-          // FETCH DATA
-          const data = await Promise.all(
-            missionDates.map(async mdt => await grabData(loc, mdt))
-          );
+          if (missionDates.length > 0) {
+            // FETCH DATA
+            const data = await Promise.all(
+              missionDates.map(async mdt => await grabData(loc, mdt))
+            );
 
-          return data;
+            return data;
+          } else {
+            return null;
+          }
         })
       )
     );
 
     // console.log("docs", docs);
 
-    //  WRITE DATA
-    await writeDoc(docs).then(() => {
+    if (R.without([null], docs).length > 0) {
+      //  WRITE DATA
+      await writeDoc(docs).then(() => {
+        console.log("Evetually");
+        process.exit();
+      });
+    } else {
       console.log("Evetually");
       process.exit();
-    });
+    }
   } catch (error) {
     console.error(error);
   }

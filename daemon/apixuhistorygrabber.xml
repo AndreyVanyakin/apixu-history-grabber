@@ -1,0 +1,25 @@
+<service>
+	<id>apixuhistorygrabber.exe</id>
+	<name>Apixu-history-grabber</name>
+	<description>Grabs 7 days of history for specified locations and adds to Mongo. Checks mongo before grabbing to avoid requesing already existing data</description>
+	<executable>C:\PROGRAM FILES\NODEJS\node.exe</executable>
+	<logmode>rotate</logmode>
+	<argument>--harmony</argument>
+	<argument>C:\_me\dev\apixu-history-grabber\node_modules\node-windows\lib\wrapper.js</argument>
+	<argument>--file</argument>
+	<argument>C:\_me\dev\apixu-history-grabber\index.js</argument>
+	<argument>--log</argument>
+	<argument>Apixu-history-grabber wrapper</argument>
+	<argument>--grow</argument>
+	<argument>0.25</argument>
+	<argument>--wait</argument>
+	<argument>1</argument>
+	<argument>--maxrestarts</argument>
+	<argument>3</argument>
+	<argument>--abortonerror</argument>
+	<argument>n</argument>
+	<argument>--stopparentfirst</argument>
+	<argument>undefined</argument>
+	<stoptimeout>30sec</stoptimeout>
+	<workingdirectory>C:\_me\dev\apixu-history-grabber</workingdirectory>
+</service>
