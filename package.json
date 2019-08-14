@@ -4,8 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "grab": "node index.js",
-    "build-service": "node service.js"
+    "grab": "node index.js"
   },
   "dependencies": {
     "apixu": "apixu/apixu-nodejs#master",

@@ -4,5 +4,5 @@ module.exports = {
   DB_URL: "mongodb://localhost:27017/",
   DB_NAME: "apixu-weather",
   DAYS_BEFORE: 7,
-  LOCATIONS: ["Beslan"]
+  LOCATIONS: ["Beslan", "Moscow"]
 };
